@@ -1,7 +1,6 @@
 kind: Service
 apiVersion: v1
 metadata:
-  namespace: train-schedule
   name: train-schedule-service
 spec:
   type: NodePort
@@ -17,6 +16,7 @@ spec:
 apiVersion: apps/v1
 kind: Deployment
 metadata:
+  namespace: train-schedule
   name: train-schedule-deployment
   labels:
     app: train-schedule
